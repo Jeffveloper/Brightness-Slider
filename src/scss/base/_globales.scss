@@ -1,0 +1,43 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// main cont
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+}
+#main{
+    background: rgb(68, 63, 114, 0.1);
+    position:relative;
+    z-index: 1;
+}
+.main-wrapper{
+    margin: 0 auto;
+    max-width: v.$phone;
+    height: 100vh;
+    position:relative;
+    z-index: 2;
+    
+    @include m.tablet {
+        max-width: v.$tablet;
+    }
+    
+    @include m.desktop {
+        max-width: 120rem;
+    }
+}
+
+.main-content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

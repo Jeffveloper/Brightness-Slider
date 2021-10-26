@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <!-- Primary Meta Tags -->
+    <title>Brightness Slider</title>
+    <meta name="title" content="Brightness Slider">
+    <meta name="description" content="el complemento perfecto para diversos proyectos, sus posibilidades de uso son muy diversas, todo depende de tu creatividad">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jeffveloper.github.io/Brightness-Slider/">
+    <meta property="og:title" content="Brightness Slider">
+    <meta property="og:description" content="el complemento perfecto para diversos proyectos, sus posibilidades de uso son muy diversas, todo depende de tu creatividad">
+    <meta property="og:image" content="./assets/img/miniatura.png">
+    <meta property="og:image" content="./assets/img/miniatura.webp">
+    <meta property="og:image" content="./assets/img/miniatura.avif">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jeffveloper.github.io/Brightness-Slider/">
+    <meta property="twitter:title" content="Brightness Slider">
+    <meta property="twitter:description" content="el complemento perfecto para diversos proyectos, sus posibilidades de uso son muy diversas, todo depende de tu creatividad">
+    <meta property="twitter:image" content="./assets/img/miniatura.png">
+    <meta property="twitter:image" content="./assets/img/miniatura.webp">
+    <meta property="twitter:image" content="./assets/img/miniatura.avif">
+    <!-- ico -->
+    <link rel="icon" href="./assets/img/sun-ico.avif">
+
+</head>
+<body>
+    <main id="main">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="bright">
+                    <picture>
+                        <source srcset="./assets/img/sun-ico.avif" type="image/avif">
+                        <source srcset="./assets/img/sun-ico.webp" type="image/webp">
+                        <img id='bright_img' class="bright_img" loading="lazy" src="./assets/img/sun-ico.png" width="24" height="24" alt="sun">
+                    </picture>
+                    <div class="input-cont">
+                        <input type="range" id='bright-progress' min="10" max="100" value="10" >
+                        <div id="backgroundBar"></div>
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src='./assets/js/app.js'></script>
+</body>
+</html>

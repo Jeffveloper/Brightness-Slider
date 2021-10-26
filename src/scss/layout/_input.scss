@@ -1,0 +1,81 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.input-cont{
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+#bright-progress{
+    z-index: 4;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1rem;
+    outline: none;
+    border-radius: 1rem;
+    background: v.$azul2;
+    position:relative;
+    
+    background: transparent;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+#bright-progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height:2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    background: v.$naranja1;
+    // background: transparent;
+    z-index: 4;
+    
+    &:hover{
+        transition:.2s ease;
+        box-shadow: 0 0 0 1rem v.$naranja3;
+    }
+}
+
+#backgroundBar{
+    z-index: 2;
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+    background: v.$azul2;
+    position: absolute;
+    top: 0;
+}
+#progressBar{
+    z-index: 3;
+    // width: 100%;
+    width: 0;
+    height: 1rem;
+    background: v.$naranja1;
+    border-radius: 1rem;
+    position:absolute;
+    top: 0;
+}
+.borde-click::-webkit-slider-thumb{
+    box-shadow: 0 0 0 1rem v.$naranja2 !important;
+    transition:.2s ease;
+    @include m.tablet {
+        box-shadow: 0 0 0 2rem v.$naranja2 !important;
+    }
+}
+@media (min-width: v.$tablet){
+    #bright-progress, #progressBar, #backgroundBar{
+        height: 2rem;
+    }
+    #bright-progress::-webkit-slider-thumb{
+            height:4.4rem;
+            width: 4.4rem;
+            &:hover{
+                transition:.2s ease;
+                box-shadow: 0 0 0 2rem v.$naranja3;
+            }
+    }
+}
+
